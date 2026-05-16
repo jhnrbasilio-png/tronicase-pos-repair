@@ -1,0 +1,18 @@
+TRONICASE POS + REPAIR RECEIPT
+Branch: TroniCase Main
+Address: Brgy. 3, San Nicolas, Ilocos Norte
+Receipt: TC-20260517-0001
+Cashier: Lea Santos
+Payment: CASH
+
+1 x iPhone 11 Battery                 PHP 1,690
+1 x 9D Tempered Glass                 PHP   150
+
+Subtotal                              PHP 1,840
+Discount                              PHP   150
+TOTAL                                 PHP 1,690
+Tendered                              PHP 2,000
+Change                                PHP   310
+
+Repair warranty and product return policies are handled by branch staff.
+Thank you for choosing TroniCase.
