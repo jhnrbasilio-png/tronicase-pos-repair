@@ -17,7 +17,7 @@ Original full-stack web app for TroniCase branch operations. It is inspired by t
 
 - Authentication with role-based access: Super Admin, Admin, Branch Manager, Sales Lady / Cashier, Technician, Developer
 - Dashboard with sales, repairs, inventory value, expenses, net income, low stock alerts, recent repair orders, and daily/monthly charts
-- POS checkout with search, SKU/barcode entry, cart, discount, cash/GCash, receipt print/download, and inventory deduction API
+- POS checkout with search, SKU/barcode, cart, discount, cash/GCash, receipt print/download, and inventory deduction API
 - Products and inventory with SKU/barcode, category, brand/model compatibility, pricing, branch stock, low-stock alerts, and stock transfers
 - Repair tickets with customer/device details, diagnosis, technician assignment, statuses, parts, labor, signature field, photo fields, and warranty tracking
 - Sales reports with date, branch, and cashier filters plus CSV/PDF actions
@@ -55,6 +55,44 @@ npm run dev
 ```
 
 Open `http://localhost:3000`.
+
+## Deploy With GitHub + Vercel
+
+GitHub Pages is not enough for this app because it uses Next.js API routes, Prisma, authentication cookies, and PostgreSQL. Use GitHub as the code host and Vercel as the live web host.
+
+1. Create or open this GitHub repository:
+
+```text
+https://github.com/jhnrbasilio-png/tronicase-pos-repair
+```
+
+2. Create a PostgreSQL database with Neon, Supabase, Railway, or Render.
+
+3. Import the GitHub repository into Vercel.
+
+4. Add these Vercel environment variables:
+
+```env
+DATABASE_URL="your-postgresql-connection-string"
+AUTH_SECRET="replace-with-a-long-random-secret"
+NEXT_PUBLIC_APP_URL="https://your-vercel-project.vercel.app"
+```
+
+5. Use these Vercel build settings:
+
+```text
+Framework Preset: Next.js
+Install Command: npm install
+Build Command: npm run vercel-build
+Output Directory: .next
+```
+
+6. After the first deploy, run database migration and seed once:
+
+```bash
+npm run prisma:deploy
+npm run prisma:seed
+```
 
 ## Demo Accounts
 
