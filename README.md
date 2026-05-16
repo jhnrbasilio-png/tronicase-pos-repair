@@ -94,12 +94,14 @@ Build Command: npm run vercel-build
 Output Directory: .next
 ```
 
-7. After the first deploy, run database migration and seed once:
+7. After the first deploy, run database setup and seed once:
 
 ```bash
-npm run prisma:deploy
+npm run prisma:push
 npm run prisma:seed
 ```
+
+Use `prisma:deploy` later if you add checked-in Prisma migration files.
 
 ## Demo Accounts
 
